@@ -1,63 +1,24 @@
-<br />
+<h1 align="center">Implementation of a TCP client-server</h1>
+<br>
 
-<h2 align="center">Implementation of a TCP client-server. Where the client requests files from a TCP server, which serves the requested files.</h2>
-
-<br />
-<br />
-
-* [About the Project](#about-the-project)
-  * [Overview](#overview)
-  * [Client](#client)
-  * [Server](#server)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Execution](#execution)
-* [Contact](#contact)
-* [License](#license)
-
-<br />
-
-## About The Project
-
-### Overview
+## Challenge
 <p align="justify">
-This project consists of the implementation of a TCP client-server. In it we find the TCP client, which can request the files located in the directory of the TCP server, which serves the requested files.
+The project consists of building a TCP server where the client requests files from the server.
+	
+- The server must return to the client a list of all the files contained in its cache memory.
+- The cache must have a maximum size of 64MB.
+- The server must be multi-threaded.
+- There must be a function that allows the client to get a list containing the names of files in the server's cache that must follow the following command line pattern: ./tcp_client server_host server_port list
+</p>
+<br>
 
-The client, after establishing a connection with the server, sends the requested file name. The server, upon receiving the request, looks for the file in its cache memory or in its predefined directory. If the file is found in either location, the server then transmits the file's content to the client over the same connection.
+### Server
+<p align="justify">
+The server, being Multi-Thread, creates a Thread for each connection made.
 
 </p>
+<br>
 
-#### Client
-
-The client presents the implementation of a TCP-client. Client requests take 4 parameters - the server name, the server port, the file to be requested and the directory location where you want to save the file. Can make the following requests to the server:
-
-1. File present in the server directory
-
-To order the files, the customer provides the following entry:
-```sh
-python3 client.py host port file-name directory
-```
-
-<p align="center">
-  <img src="assets/file-request.gif" />
-</p>
-
-If the file is not present in the server's directory, the following result is expected:
-
-<p align="center">
-  <img src="assets/file-not.gif" />
-</p>
-
-2. Files allocated in cache memory
-
-To request the list of files in the cache memory, the client provides the following entry:
-```sh
-python3 client.py host port list
-```
-
-<p align="center">
-  <img src="assets/list.gif" />
-</p>
 
 #### Server
 
@@ -171,15 +132,18 @@ To get a local copy up and running follow these simple example steps.
 	```
 	
 
-## Contact
+### ✒️ Autor
 
-Walber Conceição de Jesus Rocha <br />
-Bachelor of Exact and Technological Sciences - UFRB <br />
-Graduating in Computer Engineering - UFRB <br />
-E-mail: walber_jesus@hotmail.com
+</br>
 
-Project Link: [TCP-Client-Server](https://github.com/rwalber/TCP-Client-Server)
+<a href="https://github.com/gabriel61">
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/gabriel61" width="100px;" alt=""/>
+ <br />
+ 
+ [![Linkedin Badge](https://img.shields.io/badge/-gabrielsampaio-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/gabriel-oliveira-852759190/)](https://www.linkedin.com/in/gabriel-oliveira-852759190/)
+<br>
+sogabris@gmail.com
+<br>
 
-## License
+---
 
-Distributed under the MIT License. See `LICENSE` for more information.
